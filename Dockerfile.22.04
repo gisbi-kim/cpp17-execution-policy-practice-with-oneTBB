@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+
+# 필수 패키지 설치
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    build-essential \
+    g++ \
+    cmake \
+    git
+
+# 작업 디렉토리 설정
+WORKDIR /usr/src/myapp
